@@ -284,6 +284,36 @@
             
 
             
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script data-pjax>
+        Waline.init({
+            el: '#waline',
+            serverURL: 'https://comment-mtuzebtyq-jrl777.vercel.app/',
+            lang: 'zh-CN',
+            dark: 'auto',
+            requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+        });
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
         </div>
 
         
@@ -361,6 +391,10 @@
         
 
         <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-duotone fa-comments"></i>
+            </li>
         
     </ul>
 </div>
