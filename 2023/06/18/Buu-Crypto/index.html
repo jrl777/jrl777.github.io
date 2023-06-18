@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello World |
+            Buu-Crypto |
         
         H&#39;s blog
     </title>
@@ -163,7 +163,7 @@
     <div class="post-page-container">
         <div class="article-content-container">
             <div class="article-title">
-                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Hello World</h1></span>
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Buu-Crypto</h1></span>
             </div>
 
             
@@ -182,16 +182,27 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-duotone fa-pen-line"></i>&nbsp;
-        <span class="pc">2022-12-16 11:48:54</span>
-        <span class="mobile">2022-12-16 11:48</span>
+        <span class="pc">2023-06-18 21:42:46</span>
+        <span class="mobile">2023-06-18 21:42</span>
     </span>
     
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-duotone fa-tags"></i></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/CTF%E5%B0%8F%E8%AF%95/">CTF小试</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>75 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>305 Words</span>
         </span>
     
     
@@ -212,19 +223,55 @@
             
 
             <div class="article-content markdown-body">
-                <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+                <h1 id="BuuCTF刷题记录-Crypto"><a href="#BuuCTF刷题记录-Crypto" class="headerlink" title="BuuCTF刷题记录-Crypto"></a>BuuCTF刷题记录-Crypto</h1><h2 id="1-异性相吸"><a href="#1-异性相吸" class="headerlink" title="1.异性相吸"></a>1.异性相吸</h2><p><strong>TASK：</strong></p>
+<p>最近出现了一个奇葩观点，说性别都不一样，怎么能谈恋爱？为了证明这个观点错误，请大家证明异性是相吸的。 </p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">key:asadsasdasdasdasdasdasdasdasdasdqwesqf</span><br><span class="line">密文：ἇ̀Ј唒ဃ塔屋䩘卖剄䐃堂ن䝔嘅均ቄ䩝ᬔ</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+<p><strong>WP：</strong></p>
+<p>用010打开两个文件，获得他们的二进制数，再经行异或</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line">a = <span class="string">&#x27;0110000101110011011000010110010001110011011000010111001101100100011000010111001101100100011000010111001101100100011000010111001101100100011000010111001101100100011000010111001101100100011000010111001101100100011000010111001101100100011000010111001101100100011100010111011101100101011100110111000101100110&#x27;</span></span><br><span class="line">b = <span class="string">&#x27;0000011100011111000000000000001100001000000001000001001001010101000000110001000001010100010110000100101101011100010110000100101001010110010100110100010001010010000000110100010000000010010110000100011000000110010101000100011100000101010101100100011101010111010001000001001001011101010010100001010000011011&#x27;</span></span><br><span class="line">c = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(a)):</span><br><span class="line">    <span class="keyword">if</span>(a[i] == b[i]):</span><br><span class="line">        c+=<span class="string">&#x27;0&#x27;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        c+=<span class="string">&#x27;1&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"><span class="comment">#0110011001101100011000010110011101111011011001010110000100110001011000100110001100110000001110010011100000111000001110010011100100110010001100100011011100110110011000100011011101100110001110010011010101100010001101010011010001100001001101110011010000110011001101010110010100111000001110010110010101111101</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(<span class="number">13040004482825639027998127915416848738127988052104145969389882111109559127041106665604212093</span>))</span><br><span class="line"><span class="comment">#flag&#123;ea1bc0988992276b7f95b54a7435e89e&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
+
+
+
+
+
+
+
+
+<h2 id="2-RSA（证书公钥解析）"><a href="#2-RSA（证书公钥解析）" class="headerlink" title="2.RSA（证书公钥解析）"></a>2.RSA（证书公钥解析）</h2><p><strong>TASK：</strong></p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/06/18/Buu-Crypto/image-20230618214433507.png"
+                      class="" title="image-20230618214433507"
+                >
+
+<p>题目给了两个附件，没遇到过，了解后知道是证书公钥解析类型的题目。（<a class="link"   target="_blank" rel="noopener" href="https://www.cnblogs.com/whbCNW/p/4141353.html" >证书公钥解析 - CNW - 博客园 (cnblogs.com)<i class="fas fa-external-link-alt"></i></a>）</p>
+<p><strong>WP：</strong></p>
+<p>pub-key:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN PUBLIC KEY-----</span><br><span class="line">MDwwDQYJKoZIhvcNAQEBBQADKwAwKAIhAMAzLFxkrkcYL2wch21CM2kQVFpY9+7+</span><br><span class="line">/AvKr1rzQczdAgMBAAE=</span><br><span class="line">-----END PUBLIC KEY-----</span><br></pre></td></tr></table></figure></div>
+
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/06/18/Buu-Crypto/image-20230618215153956.png"
+                      class="" title="image-20230618215153956"
+                >
+
+
+
+<p>公钥解析后就是基本的RSA，脚本如下：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">import</span> libnum</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> rsa</span><br><span class="line"></span><br><span class="line">e= <span class="number">65537</span></span><br><span class="line">n= <span class="number">86934482296048119190666062003494800588905656017203025617216654058378322103517</span></span><br><span class="line">p= <span class="number">285960468890451637935629440372639283459</span></span><br><span class="line">q= <span class="number">304008741604601924494328155975272418463</span></span><br><span class="line">d= <span class="number">81176168860169991027846870170527607562179635470395365333547868786951080991441</span></span><br><span class="line"></span><br><span class="line">key = rsa.PrivateKey(n,e,d,q,p)         <span class="comment">#在pkcs标准中,pkcs#1规定,私钥包含(n,e,d,p,q)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;D:\CTF\\buu\\0eaf8d6c-3fe5-4549-9e81-94ac42535e7b\\flag.enc&quot;</span>,<span class="string">&quot;rb&quot;</span>) <span class="keyword">as</span> f:  <span class="comment">#以二进制读模式，读取密文</span></span><br><span class="line">    f = f.read()</span><br><span class="line">    <span class="built_in">print</span>(rsa.decrypt(f,key))           <span class="comment"># f:公钥加密结果  key:私钥</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
+
 
             </div>
 
@@ -232,11 +279,11 @@
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Hello World</li>
+        <li>Post title：Buu-Crypto</li>
         <li>Post author：jrl</li>
-        <li>Create time：2022-12-16 11:48:54</li>
+        <li>Create time：2023-06-18 21:42:46</li>
         <li>
-            Post link：https://jrl777.github.io/2022/12/16/hello-world/
+            Post link：https://jrl777.github.io/2023/06/18/Buu-Crypto/
         </li>
         <li>
             Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
@@ -248,25 +295,33 @@
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/CTF%E5%B0%8F%E8%AF%95/">#CTF小试</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                            rel="prev"
-                            href="/2022/12/16/SYC/"
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/06/18/Summary/"
                             >
-                                <span class="left arrow-icon flex-center">
-                                <i class="fas fa-chevron-left"></i>
-                                </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">SYC三面</span>
-                                    <span class="post-nav-item">Prev posts</span>
+                                    <span class="post-nav-title-item">Summary</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                <i class="fas fa-chevron-right"></i>
                                 </span>
                             </a>
                         </div>
-                    
                     
                 </div>
             
@@ -309,7 +364,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BuuCTF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95-Crypto"><span class="nav-text">BuuCTF刷题记录-Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%BC%82%E6%80%A7%E7%9B%B8%E5%90%B8"><span class="nav-text">1.异性相吸</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-RSA%EF%BC%88%E8%AF%81%E4%B9%A6%E5%85%AC%E9%92%A5%E8%A7%A3%E6%9E%90%EF%BC%89"><span class="nav-text">2.RSA（证书公钥解析）</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>
