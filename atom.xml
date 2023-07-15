@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-08T07:54:45.626Z</updated>
+  <updated>2023-07-15T13:33:50.109Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SCM-Study</title>
+    <link href="http://example.com/2023/07/15/SCM-Study/"/>
+    <id>http://example.com/2023/07/15/SCM-Study/</id>
+    <published>2023-07-15T13:33:22.000Z</published>
+    <updated>2023-07-15T13:33:50.109Z</updated>
+    
+    
+    
+    
+    
+    <category term="SCM" scheme="http://example.com/tags/SCM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Theorem</title>
     <link href="http://example.com/2023/07/08/Theorem/"/>
     <id>http://example.com/2023/07/08/Theorem/</id>
     <published>2023-07-08T07:49:51.000Z</published>
-    <updated>2023-07-08T07:54:45.626Z</updated>
+    <updated>2023-07-15T13:30:29.781Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Theorem-in-Crypto"><a href="#Theorem-in-Crypto" class="headerlink" title="Theorem in Crypto"></a>Theorem in Crypto</h1><h2 id="1-费马小定理"><a href="#1-费马小定理" class="headerlink" title="1.费马小定理"></a>1.费马小定理</h2><h4 id="一-、定理内容"><a href="#一-、定理内容" class="headerlink" title="一 、定理内容"></a>一 、定理内容</h4><p>如果p是质数，并且a不是p的倍数。那么就有a p − 1 &#x3D; 1 ( m o d   p ) a^{p-1} &#x3D; 1(mod\space p)a<br>p−1<br> &#x3D;1(mod p)</p><p>其次我们还需要去了解逆元的意义</p><p>对于正整数a和p，如果有a x ≡ 1 ( m o d   p ) ax\equiv 1(mod\space p)ax≡1(mod p) ，那么称x的最小整数解为a模p的逆元</p><p>由上面的结论我们可以得到a的逆元其实就是a p − 2 a^{p-2}a<br>p−2<br>  ,对于这个数我们可以使用快速幂来计算结果</p><h4 id="二-、费马小定理的运用"><a href="#二-、费马小定理的运用" class="headerlink" title="二 、费马小定理的运用"></a>二 、费马小定理的运用</h4><p> 费马小定理可以用来解决求组合数的问题，在求解组合数的时候，我们虽然可以通过使用杨辉三角来进行求解，但是在一些情况下我们经常需要去求解一个组合数的模，但是那些阶乘超过了我们的运算范围，也需要对它们进行取模，可是这个时候上下同时进行取模的结果是错误的结果。下面我们来进行 a b m o d   p \frac{a}{b}mod\space p<br>b<br>a</p><p> mod p 的正确求解操作</p><p> 首先有一个前提条件是a mod b &#x3D; 0 a&#x2F;b &#x3D; m</p><p> 假设存在一个数使得ax%p &#x3D; m</p><p> 由于模运算对于乘法是有效的，所以两边同时乘上b，得到a%p &#x3D; (m%p)*(b%p)%p</p><p> 两边再同时乘以x，得到m%p &#x3D; (mb)*x%p，得到 1 &#x3D; bx%p, 所以我们可以知道这个x其实就是b的逆元，基于这个结论我们可以得到求解a b m o d    p &#x3D; a ⋅ b 的 逆 元 \frac{a}{b}\mod p &#x3D; a\cdot b的逆元<br>b<br>a</p><p> modp&#x3D;a⋅b的逆元</p><p> 所以对于组合数C a b &#x3D; a ! b ! ( a − b ) ! &#x3D; a ! ⋅ b ! ( a − b ) ! 对 于 p 的 逆 元 C_a^b &#x3D; \frac{a!}{b!(a-b)!} &#x3D; a!\cdot b!(a-b)!对于p的逆元C<br>a<br>b</p><p> &#x3D;<br>b!(a−b)!<br>a!</p><p> &#x3D;a!⋅b!(a−b)!对于p的逆元</p><p><strong>在RSA的ctf题目中总有其用武之地</strong></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Theorem-in-Crypto"><a href="#Theorem-in-Crypto" class="headerlink" title="Theorem in Crypto"></a>Theorem in Crypto</h1><h2 id="一、费马小定理"><a href="#一、费马小定理" class="headerlink" title="一、费马小定理"></a>一、费马小定理</h2><h4 id="1-定理内容"><a href="#1-定理内容" class="headerlink" title="1.定理内容"></a>1.定理内容</h4><p>如果p是质数，并且a不是p的倍数。那么就有<br>$$<br>a^{p-1} &#x3D; 1 ( m o d   p )<br>$$</p><p>对于正整数a和p，如果有<br>$$<br>a x ≡ 1 ( m o d   p )<br>$$<br>，那么称x的最小整数解为a模p的逆元</p><p>由上面的结论我们可以得到a的逆元其实就是<br>$$<br>a^{p − 2}<br>$$<br>  对于这个数我们可以使用快速幂来计算结果</p><h4 id="2-费马小定理的运用"><a href="#2-费马小定理的运用" class="headerlink" title="2.费马小定理的运用"></a>2.费马小定理的运用</h4><p> 费马小定理可以用来解决求组合数的问题，在求解组合数的时候，我们虽然可以通过使用杨辉三角来进行求解，但是在一些情况下我们经常需要去求解一个组合数的模，但是那些阶乘超过了我们的运算范围，也需要对它们进行取模，可是这个时候上下同时进行取模的结果是错误的结果。下面我们来进行 a b m o d   p \frac{a}{b}mod\space p<br>b<br>a</p><p> mod p 的正确求解操作</p><p> 首先有一个前提条件是a mod b &#x3D; 0 a&#x2F;b &#x3D; m</p><p> 假设存在一个数使得ax%p &#x3D; m</p><p> 由于模运算对于乘法是有效的，所以两边同时乘上b，得到a%p &#x3D; (m%p)*(b%p)%p</p><p> 两边再同时乘以x，得到m%p &#x3D; (mb)*x%p，得到 1 &#x3D; bx%p, 所以我们可以知道这个x其实就是b的逆元，基于这个结论我们可以得到求解<br>$$<br>\frac{a}{b}\mod p &#x3D; a\cdot b的逆元<br>$$<br> 所以对于组合数<br>$$<br>C_a^b &#x3D; \frac{a!}{b!(a-b)!} &#x3D; a!\cdot b!(a-b)!<br>$$<br>对于p的逆元C</p><p><strong>在RSA的ctf题目中总有其用武之地</strong></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;Theorem-in-Crypto&quot;&gt;&lt;a href=&quot;#Theorem-in-Crypto&quot; class=&quot;headerlink&quot; title=&quot;Theorem in Crypto&quot;&gt;&lt;/a&gt;Theorem in Crypto&lt;/h1&gt;&lt;h2 id=&quot;1-费马小</summary>
+    <summary type="html">&lt;h1 id=&quot;Theorem-in-Crypto&quot;&gt;&lt;a href=&quot;#Theorem-in-Crypto&quot; class=&quot;headerlink&quot; title=&quot;Theorem in Crypto&quot;&gt;&lt;/a&gt;Theorem in Crypto&lt;/h1&gt;&lt;h2 id=&quot;一、费马小</summary>
       
     
     

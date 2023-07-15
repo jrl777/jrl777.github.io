@@ -202,12 +202,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>538 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>442 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>2 Mins</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
         </span>
     
     
@@ -223,20 +223,15 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="Theorem-in-Crypto"><a href="#Theorem-in-Crypto" class="headerlink" title="Theorem in Crypto"></a>Theorem in Crypto</h1><h2 id="1-费马小定理"><a href="#1-费马小定理" class="headerlink" title="1.费马小定理"></a>1.费马小定理</h2><h4 id="一-、定理内容"><a href="#一-、定理内容" class="headerlink" title="一 、定理内容"></a>一 、定理内容</h4><p>如果p是质数，并且a不是p的倍数。那么就有a p − 1 &#x3D; 1 ( m o d   p ) a^{p-1} &#x3D; 1(mod\space p)a<br>p−1<br> &#x3D;1(mod p)</p>
-<p>其次我们还需要去了解逆元的意义</p>
-<p>对于正整数a和p，如果有a x ≡ 1 ( m o d   p ) ax\equiv 1(mod\space p)ax≡1(mod p) ，那么称x的最小整数解为a模p的逆元</p>
-<p>由上面的结论我们可以得到a的逆元其实就是a p − 2 a^{p-2}a<br>p−2<br>  ,对于这个数我们可以使用快速幂来计算结果</p>
-<h4 id="二-、费马小定理的运用"><a href="#二-、费马小定理的运用" class="headerlink" title="二 、费马小定理的运用"></a>二 、费马小定理的运用</h4><p> 费马小定理可以用来解决求组合数的问题，在求解组合数的时候，我们虽然可以通过使用杨辉三角来进行求解，但是在一些情况下我们经常需要去求解一个组合数的模，但是那些阶乘超过了我们的运算范围，也需要对它们进行取模，可是这个时候上下同时进行取模的结果是错误的结果。下面我们来进行 a b m o d   p \frac{a}{b}mod\space p<br>b<br>a</p>
+                <h1 id="Theorem-in-Crypto"><a href="#Theorem-in-Crypto" class="headerlink" title="Theorem in Crypto"></a>Theorem in Crypto</h1><h2 id="一、费马小定理"><a href="#一、费马小定理" class="headerlink" title="一、费马小定理"></a>一、费马小定理</h2><h4 id="1-定理内容"><a href="#1-定理内容" class="headerlink" title="1.定理内容"></a>1.定理内容</h4><p>如果p是质数，并且a不是p的倍数。那么就有<br>$$<br>a^{p-1} &#x3D; 1 ( m o d   p )<br>$$</p>
+<p>对于正整数a和p，如果有<br>$$<br>a x ≡ 1 ( m o d   p )<br>$$<br>，那么称x的最小整数解为a模p的逆元</p>
+<p>由上面的结论我们可以得到a的逆元其实就是<br>$$<br>a^{p − 2}<br>$$<br>  对于这个数我们可以使用快速幂来计算结果</p>
+<h4 id="2-费马小定理的运用"><a href="#2-费马小定理的运用" class="headerlink" title="2.费马小定理的运用"></a>2.费马小定理的运用</h4><p> 费马小定理可以用来解决求组合数的问题，在求解组合数的时候，我们虽然可以通过使用杨辉三角来进行求解，但是在一些情况下我们经常需要去求解一个组合数的模，但是那些阶乘超过了我们的运算范围，也需要对它们进行取模，可是这个时候上下同时进行取模的结果是错误的结果。下面我们来进行 a b m o d   p \frac{a}{b}mod\space p<br>b<br>a</p>
 <p> mod p 的正确求解操作</p>
 <p> 首先有一个前提条件是a mod b &#x3D; 0 a&#x2F;b &#x3D; m</p>
 <p> 假设存在一个数使得ax%p &#x3D; m</p>
 <p> 由于模运算对于乘法是有效的，所以两边同时乘上b，得到a%p &#x3D; (m%p)*(b%p)%p</p>
-<p> 两边再同时乘以x，得到m%p &#x3D; (mb)*x%p，得到 1 &#x3D; bx%p, 所以我们可以知道这个x其实就是b的逆元，基于这个结论我们可以得到求解a b m o d    p &#x3D; a ⋅ b 的 逆 元 \frac{a}{b}\mod p &#x3D; a\cdot b的逆元<br>b<br>a</p>
-<p> modp&#x3D;a⋅b的逆元</p>
-<p> 所以对于组合数C a b &#x3D; a ! b ! ( a − b ) ! &#x3D; a ! ⋅ b ! ( a − b ) ! 对 于 p 的 逆 元 C_a^b &#x3D; \frac{a!}{b!(a-b)!} &#x3D; a!\cdot b!(a-b)!对于p的逆元C<br>a<br>b</p>
-<p> &#x3D;<br>b!(a−b)!<br>a!</p>
-<p> &#x3D;a!⋅b!(a−b)!对于p的逆元</p>
+<p> 两边再同时乘以x，得到m%p &#x3D; (mb)*x%p，得到 1 &#x3D; bx%p, 所以我们可以知道这个x其实就是b的逆元，基于这个结论我们可以得到求解<br>$$<br>\frac{a}{b}\mod p &#x3D; a\cdot b的逆元<br>$$<br> 所以对于组合数<br>$$<br>C_a^b &#x3D; \frac{a!}{b!(a-b)!} &#x3D; a!\cdot b!(a-b)!<br>$$<br>对于p的逆元C</p>
 <p><strong>在RSA的ctf题目中总有其用武之地</strong></p>
 
             </div>
@@ -272,6 +267,21 @@
 
             
                 <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/07/15/SCM-Study/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">SCM-Study</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
                     
                     
                         <div class="article-next">
@@ -330,7 +340,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Theorem-in-Crypto"><span class="nav-text">Theorem in Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86"><span class="nav-text">1.费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80-%E3%80%81%E5%AE%9A%E7%90%86%E5%86%85%E5%AE%B9"><span class="nav-text">一 、定理内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C-%E3%80%81%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86%E7%9A%84%E8%BF%90%E7%94%A8"><span class="nav-text">二 、费马小定理的运用</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Theorem-in-Crypto"><span class="nav-text">Theorem in Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86"><span class="nav-text">一、费马小定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%9A%E7%90%86%E5%86%85%E5%AE%B9"><span class="nav-text">1.定理内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86%E7%9A%84%E8%BF%90%E7%94%A8"><span class="nav-text">2.费马小定理的运用</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
 </div>
             </div>
