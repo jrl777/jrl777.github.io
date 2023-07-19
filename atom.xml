@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-15T13:33:50.109Z</updated>
+  <updated>2023-07-19T11:09:30.016Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,13 +21,22 @@
     <link href="http://example.com/2023/07/15/SCM-Study/"/>
     <id>http://example.com/2023/07/15/SCM-Study/</id>
     <published>2023-07-15T13:33:22.000Z</published>
-    <updated>2023-07-15T13:33:50.109Z</updated>
+    <updated>2023-07-19T11:09:30.016Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Contents</strong></p><p>[TOC]</p><h1 id="一、Preparation"><a href="#一、Preparation" class="headerlink" title="一、Preparation"></a>一、Preparation</h1><h2 id="1-Two-applications"><a href="#1-Two-applications" class="headerlink" title="1. Two applications"></a>1. Two applications</h2><h3 id="Keil5（编写程序）"><a href="#Keil5（编写程序）" class="headerlink" title="Keil5（编写程序）"></a>Keil5（编写程序）</h3><img                       lazyload                     src="/images/loading.svg"                     data-src="/2023/07/15/SCM-Study/image-20230718114300607.png"                      class="" title="image-20230718114300607"                ><p>(1)从官网下载Keil5</p><img                       lazyload                     src="/images/loading.svg"                     data-src="/2023/07/15/SCM-Study/image-20230718114530122.png"                      class="" title="image-20230718114530122"                ><p>(2)从License Magement中复制你的CID并将其输入keygen中激活</p><img                       lazyload                     src="/images/loading.svg"                     data-src="/2023/07/15/SCM-Study/image-20230718114934737.png"                      class="" title="image-20230718114934737"                ><table><thead><tr><th>注意，以管理员身份运行程序，否则权限不够。  AND    在打开Keygen或者下载前，关闭防火墙，否则有一定概率误杀</th></tr></thead></table><p>(3)点击Generate，完成激活</p><img                       lazyload                     src="/images/loading.svg"                     data-src="/2023/07/15/SCM-Study/image-20230718115826337.png"                      class="" title="image-20230718115826337"                ><h3 id="Stc-isp（下载程序）"><a href="#Stc-isp（下载程序）" class="headerlink" title="Stc-isp（下载程序）"></a>Stc-isp（下载程序）</h3><p>这个自行搜索下载</p><img                       lazyload                     src="/images/loading.svg"                     data-src="/2023/07/15/SCM-Study/image-20230718114336762.png"                      class="" title="image-20230718114336762"                ><p>在成功下载之后，一般来说无法直接读取或识别外接的C51，这个时候需要安装相应的driver：</p><img                       lazyload                     src="/images/loading.svg"                     data-src="SCM-Study/image-20230719185302109.png"                      alt="image-20230719185302109" style="zoom:67%;"                 ><p>这时候如果在任务管理器中能够能看到USB-SERIAL，说明驱动安装成功，C51已被读取。</p><img                       lazyload                     src="/images/loading.svg"                     data-src="SCM-Study/image-20230719185517170.png"                      alt="image-20230719185517170" style="zoom: 67%;"                 ><h1 id="二、About-MCU"><a href="#二、About-MCU" class="headerlink" title="二、About  MCU"></a>二、About  MCU</h1><h2 id="1-Brief-introduction"><a href="#1-Brief-introduction" class="headerlink" title="1.Brief introduction"></a>1.Brief introduction</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Contents&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;一、Preparation&quot;&gt;&lt;a href=&quot;#一、Preparation&quot; class=&quot;headerlink&quot; title=&quot;一、Preparation&quot;&gt;&lt;/a&gt;一</summary>
+      
     
     
     
     
-    
-    <category term="SCM" scheme="http://example.com/tags/SCM/"/>
+    <category term="MCU" scheme="http://example.com/tags/MCU/"/>
     
   </entry>
   

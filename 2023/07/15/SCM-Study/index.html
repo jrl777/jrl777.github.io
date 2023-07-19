@@ -192,7 +192,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/SCM/">SCM</a>&nbsp;
+                        <a href="/tags/MCU/">MCU</a>&nbsp;
                     </li>
                 
             </ul>
@@ -200,6 +200,10 @@
     
 
     
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>171 Words</span>
+        </span>
     
     
         <span class="article-min2read article-meta-item">
@@ -219,7 +223,97 @@
             
 
             <div class="article-content markdown-body">
-                
+                <p><strong>Contents</strong></p>
+<p>[TOC]</p>
+<h1 id="一、Preparation"><a href="#一、Preparation" class="headerlink" title="一、Preparation"></a>一、Preparation</h1><h2 id="1-Two-applications"><a href="#1-Two-applications" class="headerlink" title="1. Two applications"></a>1. Two applications</h2><h3 id="Keil5（编写程序）"><a href="#Keil5（编写程序）" class="headerlink" title="Keil5（编写程序）"></a>Keil5（编写程序）</h3><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/15/SCM-Study/image-20230718114300607.png"
+                      class="" title="image-20230718114300607"
+                >
+
+
+
+<p>(1)从官网下载Keil5</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/15/SCM-Study/image-20230718114530122.png"
+                      class="" title="image-20230718114530122"
+                >
+
+<p>(2)从License Magement中复制你的CID并将其输入keygen中激活</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/15/SCM-Study/image-20230718114934737.png"
+                      class="" title="image-20230718114934737"
+                >
+
+<table>
+<thead>
+<tr>
+<th>注意，以管理员身份运行程序，否则权限不够。  AND    在打开Keygen或者下载前，关闭防火墙，否则有一定概率误杀</th>
+</tr>
+</thead>
+</table>
+<p>(3)点击Generate，完成激活</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/15/SCM-Study/image-20230718115826337.png"
+                      class="" title="image-20230718115826337"
+                >
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="Stc-isp（下载程序）"><a href="#Stc-isp（下载程序）" class="headerlink" title="Stc-isp（下载程序）"></a>Stc-isp（下载程序）</h3><p>这个自行搜索下载</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/15/SCM-Study/image-20230718114336762.png"
+                      class="" title="image-20230718114336762"
+                >
+
+<p>在成功下载之后，一般来说无法直接读取或识别外接的C51，这个时候需要安装相应的driver：</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="SCM-Study/image-20230719185302109.png"
+                      alt="image-20230719185302109" style="zoom:67%;" 
+                >
+
+
+
+
+
+<p>这时候如果在任务管理器中能够能看到USB-SERIAL，说明驱动安装成功，C51已被读取。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="SCM-Study/image-20230719185517170.png"
+                      alt="image-20230719185517170" style="zoom: 67%;" 
+                >
+
+
+
+
+
+
+
+
+
+<h1 id="二、About-MCU"><a href="#二、About-MCU" class="headerlink" title="二、About  MCU"></a>二、About  MCU</h1><h2 id="1-Brief-introduction"><a href="#1-Brief-introduction" class="headerlink" title="1.Brief introduction"></a>1.Brief introduction</h2>
             </div>
 
             
@@ -245,7 +339,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/SCM/">#SCM</a>&nbsp;
+                            <a href="/tags/MCU/">#MCU</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -311,7 +405,7 @@
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81Preparation"><span class="nav-text">一、Preparation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Two-applications"><span class="nav-text">1. Two applications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Keil5%EF%BC%88%E7%BC%96%E5%86%99%E7%A8%8B%E5%BA%8F%EF%BC%89"><span class="nav-text">Keil5（编写程序）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stc-isp%EF%BC%88%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F%EF%BC%89"><span class="nav-text">Stc-isp（下载程序）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81About-MCU"><span class="nav-text">二、About  MCU</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Brief-introduction"><span class="nav-text">1.Brief introduction</span></a></li></ol></li></ol>
     </div>
 </div>
             </div>
