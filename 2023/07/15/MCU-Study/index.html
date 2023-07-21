@@ -289,8 +289,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230719185302109.png"
-                      alt="image-20230719185302109" style="zoom:67%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721233738490.png"
+                      class="" title="image-20230721233738490"
                 >
 
 
@@ -301,8 +301,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230719185517170.png"
-                      alt="image-20230719185517170" style="zoom: 67%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721233805538.png"
+                      class="" title="image-20230721233805538"
                 >
 
 
@@ -329,8 +329,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230720112738741.png"
-                      alt="image-20230720112738741" style="zoom:50%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721233828196.png"
+                      class="" title="image-20230721233828196"
                 >
 
 
@@ -338,8 +338,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230720111116576.png"
-                      alt="image-20230720111116576" style="zoom: 50%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721233855915.png"
+                      class="" title="image-20230721233855915"
                 >
 
 <p>*<code>类比电脑内存条</code>*：<strong>RAM</strong>（Random Access Memory，<strong>随机存取存储器</strong>）是计算机中的一种主要存储设备，用于临时存储和快速访问数据。它是计算机的一个重要组成部分，用于存储正在执行的程序和数据。</p>
@@ -428,23 +428,28 @@
 <p>LED具有许多优点。首先，LED保存能量且效率高，相比传统光源，LED产生的光功率更大，但消耗的电能更少。其次，LED寿命长，通常可以达到数万个小时，远远超过传统光源。此外，LED具有快速开启和关闭的特性，并且可以根据需要调节亮度，因此被广泛应用于照明和显示领域。</p>
 <p>LED在各个领域有广泛的应用。在照明领域，LED被用于家庭照明、商业照明和街道照明等。由于其高效节能的特性，LED也被用于太阳能照明和绿色建筑项目中。在电子显示领域，LED用于制造各种显示屏，如电视、计算机显示器和手机屏幕。此外，LED还常用于车辆照明、室内装饰、电子设备指示灯等。</p>
 <h4 id="1-点亮一个LED"><a href="#1-点亮一个LED" class="headerlink" title="(1)点亮一个LED"></a>(1)点亮一个LED</h4><p>首先观察MCU里的LED模块</p>
-<p><img  
+<img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721205338387.png"
-                      alt="image-20230721205338387" style="zoom: 50%;" 
-                ><img  
+                     data-src="/2023/07/15/MCU-Study/image-20230721234135751.png"
+                      class="" title="image-20230721234135751"
+                >
+
+
+
+<img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721205759157.png"
-                      alt="image-20230721205759157" style="zoom: 80%;" 
-                ></p>
+                     data-src="/2023/07/15/MCU-Study/image-20230721234150197.png"
+                      class="" title="image-20230721234150197"
+                >
+
 <p>右边图片中的RP9、RP10是两个电阻                                                                          102&#x3D;1k(10*10^2)元器件上的标号以此类推</p>
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721223227335.png"
-                      alt="image-20230721223227335" style="zoom: 50%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721234217106.png"
+                      class="" title="image-20230721234217106"
                 >
 
 <p>P2口下的寄存器控制LED：       1–5V  不亮              0–0V  亮</p>
@@ -455,8 +460,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721203045992.png"
-                      alt="image-20230721203045992" style="zoom: 67%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721234242038.png"
+                      class="" title="image-20230721234242038"
                 >
 
 
@@ -464,8 +469,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721203148960.png"
-                      alt="image-20230721203148960" style="zoom:67%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721234253284.png"
+                      class="" title="image-20230721234253284"
                 >
 
 
@@ -489,14 +494,7 @@
 
 
 <p> 3.编写控制LED的代码</p>
-<img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721224514767.png"
-                      alt="image-20230721224514767" style="zoom: 67%;" 
-                >
-
-
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;REGX52.H&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	P2=<span class="number">0xFE</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 
 
@@ -504,8 +502,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721225402141.png"
-                      alt="image-20230721225402141" style="zoom:80%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721234502390.png"
+                      class="" title="image-20230721234502390"
                 >
 
 
@@ -519,8 +517,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721224812379.png"
-                      alt="image-20230721224812379" style="zoom:80%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721234514429.png"
+                      class="" title="image-20230721234514429"
                 >
 
 <img  
@@ -534,8 +532,8 @@
 <img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="MCU-Study/image-20230721230505945.png"
-                      alt="image-20230721230505945" style="zoom:67%;" 
+                     data-src="/2023/07/15/MCU-Study/image-20230721234524672.png"
+                      class="" title="image-20230721234524672"
                 >
 
 
