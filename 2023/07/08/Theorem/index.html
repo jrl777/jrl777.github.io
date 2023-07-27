@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="jrl">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+        
+            <link rel="preconnect" href="https://npm.elemecdn.com" crossorigin>
+        
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2023/07/08/theorem/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="Theorem in Crypto一、Fermat’s Little Theorem（费马小定理）1.定理内容如果p是质数，并且a不是p的倍数。那么就有$$a^{p-1} &#x3D; 1 (mod p)$$ 对于正整数a和p，如果有$$a x ≡ 1 ( m o d   p )$$，那么称x的最小整数解为a模p的逆元 由上面的结论我们可以得到a的逆元其实就是$$a^{p − 2}$$  对于这个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Theorem">
+<meta property="og:url" content="http://example.com/2023/07/08/Theorem/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Theorem in Crypto一、Fermat’s Little Theorem（费马小定理）1.定理内容如果p是质数，并且a不是p的倍数。那么就有$$a^{p-1} &#x3D; 1 (mod p)$$ 对于正整数a和p，如果有$$a x ≡ 1 ( m o d   p )$$，那么称x的最小整数解为a模p的逆元 由上面的结论我们可以得到a的逆元其实就是$$a^{p − 2}$$  对于这个">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618184134796.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618184240203.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618184354156.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618184502609.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618184601062.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618184638140.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618184737359.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140904164235549.png">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618185352656.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618185529953.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/20140618185628671.jpeg">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/994344-20160928225142250-925008424.png">
+<meta property="og:image" content="http://example.com/2023/07/08/Theorem/994344-20160929150603750-268147485.png">
+<meta property="article:published_time" content="2023-07-08T07:49:51.000Z">
+<meta property="article:modified_time" content="2023-07-26T10:40:42.234Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Crypto">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/08/Theorem/20140618184134796.jpeg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/d51b6e276e6c429db8275af5916f6f1d!400x400.jpeg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/d51b6e276e6c429db8275af5916f6f1d!400x400.jpeg">
+    <meta name="theme-color" content="#005080">
+    <link rel="shortcut icon" href="/images/d51b6e276e6c429db8275af5916f6f1d!400x400.jpeg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Theorem -
+        
+        H&#39;s blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/fonts/fonts.css">
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/fonts/Satoshi/satoshi.css">
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/fonts/Chillax/chillax.css">
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":true,"list":["Lv1","Lv2","Lv3","Lv4","Lv5","Lv6"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#005080","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"static","image":{"light":"/images/r.png","dark":"/images/l.png"},"title":"H's Blog","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#660000","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":"https://github.com/jrl777","instagram":null,"zhihu":null,"twitter":null,"email":"18994771096@163.com"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":6},"tags":{"enable":true,"limit":6}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/fontawesome/brands.min.css">
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/fontawesome/solid.min.css">
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/fontawesome/regular.min.css">
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                H&#39;s blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                
+                  <h1 class="article-title-regular">Theorem</h1>
+                
+              </div>
+              
+                     
+            
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/d51b6e276e6c429db8275af5916f6f1d!400x400.jpeg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">jrl</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-07-08 15:49:51</span>
+        <span class="mobile">2023-07-08 15:49:51</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-07-26 18:40:42</span>
+            <span class="mobile">2023-07-26 18:40:42</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Crypto/">Crypto</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.8k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="Theorem-in-Crypto"><a href="#Theorem-in-Crypto" class="headerlink" title="Theorem in Crypto"></a>Theorem in Crypto</h1><h2 id="一、Fermat’s-Little-Theorem（费马小定理）"><a href="#一、Fermat’s-Little-Theorem（费马小定理）" class="headerlink" title="一、Fermat’s Little Theorem（费马小定理）"></a>一、Fermat’s Little Theorem（费马小定理）</h2><h4 id="1-定理内容"><a href="#1-定理内容" class="headerlink" title="1.定理内容"></a>1.定理内容</h4><p>如果p是质数，并且a不是p的倍数。那么就有<br>$$<br>a^{p-1} &#x3D; 1 (mod p)<br>$$</p>
+<p>对于正整数a和p，如果有<br>$$<br>a x ≡ 1 ( m o d   p )<br>$$<br>，那么称x的最小整数解为a模p的逆元</p>
+<p>由上面的结论我们可以得到a的逆元其实就是<br>$$<br>a^{p − 2}<br>$$<br>  对于这个数我们可以使用快速幂来计算结果</p>
+<h4 id="2-费马小定理的运用"><a href="#2-费马小定理的运用" class="headerlink" title="2.费马小定理的运用"></a>2.费马小定理的运用</h4><p> 费马小定理可以用来解决求组合数的问题，在求解组合数的时候，我们虽然可以通过使用杨辉三角来进行求解，但是在一些情况下我们经常需要去求解一个组合数的模，但是那些阶乘超过了我们的运算范围，也需要对它们进行取模，可是这个时候上下同时进行取模的结果是错误的结果。下面我们来进行 a b m o d   p \frac{a}{b}mod\space p<br>b<br>a</p>
+<p> mod p 的正确求解操作</p>
+<p> 首先有一个前提条件是a mod b &#x3D; 0 a&#x2F;b &#x3D; m</p>
+<p> 假设存在一个数使得ax%p &#x3D; m</p>
+<p> 由于模运算对于乘法是有效的，所以两边同时乘上b，得到a%p &#x3D; (m%p)*(b%p)%p</p>
+<p> 两边再同时乘以x，得到m%p &#x3D; (mb)*x%p，得到 1 &#x3D; bx%p, 所以我们可以知道这个x其实就是b的逆元，基于这个结论我们可以得到求解<br>$$<br>\frac{a}{b}\mod p &#x3D; a\cdot b的逆元<br>$$<br> 所以对于组合数<br>$$<br>C_a^b &#x3D; \frac{a!}{b!(a-b)!} &#x3D; a!\cdot b!(a-b)!<br>$$<br>对于p的逆元</p>
+<p><strong>在RSA的ctf题目中总有其用武之地</strong></p>
+<h2 id="二、Chinese-remainder-theorem（中国剩余定理）"><a href="#二、Chinese-remainder-theorem（中国剩余定理）" class="headerlink" title="二、Chinese remainder theorem（中国剩余定理）"></a>二、Chinese remainder theorem（中国剩余定理）</h2><h3 id="1-定理内容-1"><a href="#1-定理内容-1" class="headerlink" title="1.定理内容"></a>1.定理内容</h3><p>在《孙子算经》中有这样一个问题：“今有物不知其数，三三数之剩二（除以3余2），五五数之剩三（除以5余3），七七数之剩二（除以7余2），问物几何？”这个问题称为“孙子问题”，该问题的一般解法国际上称为“中国剩余定理”。具体解法分三步：</p>
+<ol>
+<li><ol>
+<li>找出三个数：从3和5的公倍数中找出被7除余1的最小数15，从3和7的公倍数中找出被5除余1 的最小数21，最后从5和7的公倍数中找出除3余1的最小数70。</li>
+<li>用15乘以2（2为最终结果除以7的余数），用21乘以3（3为最终结果除以5的余数），同理，用70乘以2（2为最终结果除以3的余数），然后把三个乘积相加15∗2+21∗3+70∗215∗2+21∗3+70∗2得到和233。</li>
+<li>用233除以3，5，7三个数的最小公倍数105，得到余数23，即233%105&#x3D;23233%105&#x3D;23。这个余数23就是符合条件的最小数。</li>
+</ol>
+</li>
+</ol>
+<p>　　就这么简单。我们在感叹神奇的同时不禁想知道古人是如何想到这个方法的，有什么基本的数学依据吗？</p>
+<p>　　我们将“孙子问题”拆分成几个简单的小问题，从零开始，试图揣测古人是如何推导出这个解法的。</p>
+<p>　　首先，我们假设n1是满足除以3余2的一个数，比如2，5，8等等，也就是满足3∗k+2（k&gt;&#x3D;0）的一个任意数。同样，我们假设n2是满足除以5余3的一个数，n3是满足除以7余2的一个数。</p>
+<p>　　有了前面的假设，我们先从n1这个角度出发，已知n1满足除以3余2，能不能使得n1+n2的和仍然满足除以3余2？进而使得n1+n2+n3的和仍然满足除以3余2？</p>
+<p>　　这就牵涉到一个最基本数学定理，如果有a%b&#x3D;c，则有(a+k∗b)%b&#x3D;c(k为非零整数)，换句话说，如果一个除法运算的余数为c�，那么被除数与k倍的除数相加（或相减）的和（差）再与除数相除，余数不变。这个是很好证明的。</p>
+<p>　　以此定理为依据，如果n2是3的倍数，n1+n2就依然满足除以3余2。同理，如果n3也是3的倍数，那么n1+n2+n3的和就满足除以3余2。这是从n1的角度考虑的，再从n2，n3的角度出发，我们可推导出以下三点：</p>
+<ol>
+<li><ol>
+<li>为使n1+n2+n3的和满足除以3余2，n2和n3必须是3的倍数。</li>
+<li>为使n1+n2+n3的和满足除以5余3，n1和n3必须是5的倍数。</li>
+<li>为使n1+n2+n3的和满足除以7余2，n1和n2必须是7的倍数。</li>
+</ol>
+</li>
+</ol>
+<p>　　因此，为使n1+n2+n3的和作为“孙子问题”的一个最终解，需满足：</p>
+<ol>
+<li><ol>
+<li>n1除以3余2，且是5和7的公倍数。</li>
+<li>n2除以5余3，且是3和7的公倍数。</li>
+<li>n3除以7余2，且是3和5的公倍数。</li>
+</ol>
+</li>
+</ol>
+<p>　　所以，孙子问题解法的本质是从5和7的公倍数中找一个除以3余2的数n1，从3和7的公倍数中找一个除以5余3的数n2，从3和5的公倍数中找一个除以7余2的数n3，再将三个数相加得到解。在求n1，n2，n3时又用了一个小技巧，以n1为例，并非从5和7的公倍数中直接找一个除以3余2的数，而是先找一个除以3余1的数，再乘以2。也就是<strong>先求出5和7的公倍数模3下的逆元，再用逆元去乘余数</strong>。</p>
+<p>　　这里又有一个数学公式，如果a%b&#x3D;c，那么(a∗k)%b&#x3D;a%b+a%b+…+a%b&#x3D;c+c+…+c&#x3D;k∗c(k&gt;0),也就是说，如果一个除法的余数为c�，那么被除数的k倍与除数相除的余数为k∗c。展开式中已证明。</p>
+<p>　　最后，我们还要清楚一点，n1+n2+n3只是问题的一个解，并不是最小的解。如何得到最小解？我们只需要从中最大限度的减掉掉3，5，7的公倍数105即可。道理就是前面讲过的定理“如果a%b&#x3D;c，则有<br>$$<br>(a−k∗b)(mod b)&#x3D;c^n<br>$$<br>所以（n1+n2+n3）%105（就是最终的最小解。</p>
+<p>　　这样一来就得到了中国剩余定理的公式：</p>
+<blockquote>
+<p>设正整数<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618184134796.jpeg"
+                      class="" title="img"
+                >两两互素，则同余方程组</p>
+<p>​               <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618184240203.jpeg"
+                      class="" title="img"
+                ></p>
+<p>有整数解。并且在模<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618184354156.jpeg"
+                      class="" title="img"
+                >下的解是唯一的，解为</p>
+<p>​                <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618184502609.jpeg"
+                      class="" title="img"
+                ></p>
+<p>其中<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618184601062.jpeg"
+                      class="" title="img"
+                >，而<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618184638140.jpeg"
+                      class="" title="img"
+                >为<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618184737359.jpeg"
+                      class="" title="img"
+                >模<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140904164235549.png"
+                      class="" title="img"
+                >的逆元。</p>
+</blockquote>
+<hr>
+<h3 id="2-中国剩余定理扩展——求解模数不互质情况下的线性方程组："><a href="#2-中国剩余定理扩展——求解模数不互质情况下的线性方程组：" class="headerlink" title="2.中国剩余定理扩展——求解模数不互质情况下的线性方程组："></a>2.中国剩余定理扩展——求解模数不互质情况下的线性方程组：</h3><p>　　普通的中国剩余定理要求所有的<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618185352656.jpeg"
+                      class="" title="img"
+                >互素，那么如果不互素呢，怎么求解同余方程组？</p>
+<p>　　这种情况就采用两两合并的思想，假设要合并如下两个方程：</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618185529953.jpeg"
+                      class="" title="img"
+                >
+
+<p>　　那么得到：</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/20140618185628671.jpeg"
+                      class="" title="img"
+                >
+
+<p>　　我们需要求出一个最小的x使它满足：</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/994344-20160928225142250-925008424.png"
+                      class="" title="img"
+                >
+
+<p>　　那么x1和x2就要尽可能的小，于是我们用扩展欧几里得算法求出x1的最小正整数解，将它代回a1+m1x1，得到x的一个特解x’，当然也是最小正整数解。</p>
+<p>　　所以x的通解一定是x′加上lcm(m1,m2)∗k，这样才能保证x模m1和m2的余数是a1和a2。由此，我们把这个x′当做新的方程的余数，把lcm(m1,m2)当做新的方程的模数。（这一段是<strong>关键</strong>）</p>
+<p>　　合并完成：</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2023/07/08/Theorem/994344-20160929150603750-268147485.png"
+                      class="" title="img"
+                >
+
+
+
+
+
+
+
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Theorem</li>
+        <li><strong>Author:</strong> jrl</li>
+        <li><strong>Created at:</strong> 2023-07-08 15:49:51</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-07-26 18:40:42
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://jrl777.github.io/2023/07/08/Theorem/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Crypto/">#Crypto</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/07/15/MCU-Study/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">MCU-Study</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/06/18/Buu-Crypto/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Buu-Crypto</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">Theorem</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Theorem-in-Crypto"><span class="nav-text">Theorem in Crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81Fermat%E2%80%99s-Little-Theorem%EF%BC%88%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86%EF%BC%89"><span class="nav-text">一、Fermat’s Little Theorem（费马小定理）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Chinese-remainder-theorem%EF%BC%88%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86%EF%BC%89"><span class="nav-text">二、Chinese remainder theorem（中国剩余定理）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%9A%E7%90%86%E5%86%85%E5%AE%B9-1"><span class="nav-text">1.定理内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%AD%E5%9B%BD%E5%89%A9%E4%BD%99%E5%AE%9A%E7%90%86%E6%89%A9%E5%B1%95%E2%80%94%E2%80%94%E6%B1%82%E8%A7%A3%E6%A8%A1%E6%95%B0%E4%B8%8D%E4%BA%92%E8%B4%A8%E6%83%85%E5%86%B5%E4%B8%8B%E7%9A%84%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%EF%BC%9A"><span class="nav-text">2.中国剩余定理扩展——求解模数不互质情况下的线性方程组：</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">jrl</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.2.2</a>
+        </div>
+        
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+<script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/utils.js"></script><script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/main.js"></script><script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/layouts/navbarShrink.js"></script><script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/tools/scrollTopBottom.js"></script><script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/tools/lightDarkSwitch.js"></script>
+
+
+    <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/tools/localSearch.js"></script>
+
+
+
+    <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/tools/codeBlock.js"></script>
+
+
+
+    <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/layouts/lazyload.js"></script>
+
+
+
+    <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/tools/runtime.js"></script>
+    <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/libs/odometer.min.js"></script>
+    <link rel="stylesheet" href="//npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/assets/odometer-theme-minimal.css">
+
+
+
+  <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/libs/Typed.min.js"></script>
+  <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/plugins/typed.js"></script>
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/tools/tocToggle.js"></script><script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/libs/anime.min.js"></script><script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/layouts/toc.js"></script><script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/plugins/tabs.js"></script>
+    
+</div>
+
+
+    <script src="https://npm.elemecdn.com/hexo-theme-redefine@2.2.2/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
