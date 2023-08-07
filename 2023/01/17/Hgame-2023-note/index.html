@@ -26,7 +26,7 @@
 <meta property="og:description" content="WEEK1RSATASK： 1234567891011121314151617from Crypto.Util.number import *flag &#x3D; open(&amp;#x27;flag.txt&amp;#x27;, &amp;#x27;rb&amp;#x27;).read()p &#x3D; getPrime(512)q &#x3D; getPrime(512)n&#x3D;p*qe &#x3D; 65537m &#x3D; bytes_to_long(flag)c">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-17T11:16:36.000Z">
-<meta property="article:modified_time" content="2023-07-26T10:40:12.716Z">
+<meta property="article:modified_time" content="2023-08-06T14:41:31.781Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="CTF小试">
 <meta name="twitter:card" content="summary">
@@ -331,8 +331,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-26 18:40:12</span>
-            <span class="mobile">2023-07-26 18:40:12</span>
+            <span class="desktop">2023-08-06 22:41:31</span>
+            <span class="mobile">2023-08-06 22:41:31</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -354,12 +354,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>941 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.2k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>4 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
         </span>
     
     
@@ -412,6 +412,13 @@
 
 
 <p><strong>wp:</strong></p>
+<p>参考官方wp: 这道题给了⼤家⼀个跑不出来的程序，需要优化程序得到flag。优化⽅法还挺多的，预期是⽤矩阵快速幂的⽅法。</p>
+<p>回到本题，根据递归函数可以得到stream的递推式 <em>S</em>[ <em>i</em> ] &#x3D; 4 ∗ <em>S</em> [ <em>i</em> − 1] + 7 ∗ <em>S</em> [ <em>i</em> − 2]</p>
+<p>类似于<strong>斐波那契数列</strong>，只不过增加了系数。 考虑⽤斐波那契矩阵和矩阵快速幂优化</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">enc = <span class="string">b&#x27;\x1a\x15\x05\t\x17\t\xf5\xa2-\x06\xec\xed\x01-\xc7\xcc2\x1eXA\x1c\x157[\x06\x13/!-\x0b\xd4\x91-\x06\x8b\xd4-\x1e+*\x15-pm\x1f\x17\x1bY&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">mul</span>(<span class="params">a, b</span>):</span><br><span class="line">   c = [[<span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">0</span>]]</span><br><span class="line">   <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">      <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">         <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">            c[i][j] += (a[i][k] * b[k][j]) % <span class="number">256</span></span><br><span class="line">            c[i][j] %= <span class="number">256</span></span><br><span class="line">   <span class="keyword">return</span> c</span><br><span class="line"> </span><br><span class="line"><span class="keyword">def</span> <span class="title function_">power</span>(<span class="params">n</span>):</span><br><span class="line">   <span class="keyword">if</span> n==<span class="number">1</span>: <span class="keyword">return</span> key[<span class="number">1</span>] % <span class="number">256</span></span><br><span class="line">   <span class="keyword">if</span> n==<span class="number">0</span>: <span class="keyword">return</span> key[<span class="number">0</span>] % <span class="number">256</span></span><br><span class="line">   res = [[<span class="number">1</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">1</span>]]</span><br><span class="line">   A = [[<span class="number">4</span>, <span class="number">7</span>], [<span class="number">1</span>, <span class="number">0</span>]]</span><br><span class="line">   <span class="keyword">while</span> n:</span><br><span class="line">      <span class="keyword">if</span> n &amp; <span class="number">1</span>: res = mul(A, res)</span><br><span class="line">      A = mul(A, A)</span><br><span class="line">      n &gt;&gt;= <span class="number">1</span></span><br><span class="line">   <span class="keyword">return</span> (res[<span class="number">1</span>][<span class="number">0</span>] * key[<span class="number">1</span>] + res[<span class="number">1</span>][<span class="number">1</span>] * key[<span class="number">0</span>]) % <span class="number">256</span></span><br><span class="line">flag = <span class="string">b&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(enc)):</span><br><span class="line">   water = power((i//<span class="number">2</span>)**<span class="number">6</span>)</span><br><span class="line">   flag += <span class="built_in">bytes</span>([water ^ enc[i]])</span><br><span class="line"><span class="built_in">print</span>(flag)</span><br></pre></td></tr></table></figure></div>
+
+
+
 <div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flag <span class="keyword">import</span> flag        <span class="comment">#flag未知</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> <span class="built_in">type</span>(flag) == <span class="built_in">bytes</span>   <span class="comment">#assert要求表达式的布尔值必须为真，说明flag的数据形式为bytes</span></span><br><span class="line"></span><br><span class="line">key = [<span class="built_in">int</span>.from_bytes(<span class="string">b&quot;Be water&quot;</span>, <span class="string">&#x27;big&#x27;</span>), <span class="built_in">int</span>.from_bytes(<span class="string">b&quot;my friend&quot;</span>, <span class="string">&#x27;big&#x27;</span>)]</span><br><span class="line"><span class="comment">#key=[4784265876259235186,2019423192753765707364]</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">stream</span>(<span class="params">i</span>):</span><br><span class="line">    <span class="keyword">if</span> i==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> key[<span class="number">0</span>]   <span class="comment">#key[0]=4784265876259235186</span></span><br><span class="line">    <span class="keyword">elif</span> i==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> key[<span class="number">1</span>]   <span class="comment">#key[1]=2019423192753765707364</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> (stream(i-<span class="number">2</span>)*<span class="number">7</span> + stream(i-<span class="number">1</span>)*<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line">enc = <span class="string">b&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(flag)):   </span><br><span class="line">    water = stream((i//<span class="number">2</span>)**<span class="number">6</span>) % <span class="number">256</span>     <span class="comment">#地板除向下取整 114 110</span></span><br><span class="line">    enc += <span class="built_in">bytes</span>([water ^ flag[i]])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(enc)</span><br><span class="line"><span class="comment"># b&#x27;\x1a\x15\x05\t\x17\tu&quot;-\x06lm\x01-\xc7\xcc2\x1eXA\x1c\x15\xb7\xdb\x06\x13\xaf\xa1-\x0b\xd4\x91-\x06\x8b\xd4-\x1e\xab\xaa\x15-\xf0\xed\x1f\x17\x1bY&#x27; </span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
@@ -434,7 +441,7 @@
         <li><strong>Created at:</strong> 2023-01-17 19:16:36</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-26 18:40:12
+                <strong>Updated at:</strong> 2023-08-06 22:41:31
             </li>
         
         <li>
