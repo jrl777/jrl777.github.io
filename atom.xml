@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-07T14:03:29.644Z</updated>
+  <updated>2023-10-06T08:19:58.719Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MCU-Study-Stm32</title>
+    <link href="http://example.com/2023/10/06/MCU-Study-Stm32/"/>
+    <id>http://example.com/2023/10/06/MCU-Study-Stm32/</id>
+    <published>2023-10-06T08:17:42.000Z</published>
+    <updated>2023-10-06T08:19:58.719Z</updated>
+    
+    <content type="html"><![CDATA[<p>111</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;111&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="MCU" scheme="http://example.com/categories/MCU/"/>
+    
+    
+    <category term="MCU" scheme="http://example.com/tags/MCU/"/>
+    
+  </entry>
   
   <entry>
     <title>Coppersmith-Study</title>
