@@ -13,22 +13,26 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/11/24/fi1nd_th3_x---wp：/"/>
+    <link rel="canonical" href="http://example.com/2023/11/23/工程实践--平衡车/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Fi1nd_th3_x—WP：  不难发现，dP、dQ、dR这三个模数两两之间并不互素。   而中国剩余定理(CRT)不能解决模数不互质情况的模线性同余方程组。很明显，这是一道exCRT的题目。关键在于求出满足条件的解系，即x’。 1234567891011121314151617181920212223242526272829303132333435363738394041#Task-expim">
+        <meta name="description" content="工程实践–平衡车Author: jrl777   基于STM32F103C8T6的两轮自平衡小车的学习过程记录，与诸君分享。内容参考平衡车开发指南。 1.原理分析1.1平衡原理  控制平衡小车的基本原理是控制中的负反馈机制。   由于小车只有两个轮子着地，车体只会在轮子滚动的方向上发生倾斜。控制轮子转动，抵消在一个维度上倾斜的趋势便可以保持车体平衡了。  接下来需要解决的问题就转化成如何控制小车车">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2023/11/24/Fi1nd_th3_x---WP%EF%BC%9A/index.html">
+<meta property="og:title" content="MCU-Vehicle-Project">
+<meta property="og:url" content="http://example.com/2023/11/23/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5--%E5%B9%B3%E8%A1%A1%E8%BD%A6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Fi1nd_th3_x—WP：  不难发现，dP、dQ、dR这三个模数两两之间并不互素。   而中国剩余定理(CRT)不能解决模数不互质情况的模线性同余方程组。很明显，这是一道exCRT的题目。关键在于求出满足条件的解系，即x’。 1234567891011121314151617181920212223242526272829303132333435363738394041#Task-expim">
+<meta property="og:description" content="工程实践–平衡车Author: jrl777   基于STM32F103C8T6的两轮自平衡小车的学习过程记录，与诸君分享。内容参考平衡车开发指南。 1.原理分析1.1平衡原理  控制平衡小车的基本原理是控制中的负反馈机制。   由于小车只有两个轮子着地，车体只会在轮子滚动的方向上发生倾斜。控制轮子转动，抵消在一个维度上倾斜的趋势便可以保持车体平衡了。  接下来需要解决的问题就转化成如何控制小车车">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-11-24T09:27:29.156Z">
-<meta property="article:modified_time" content="2023-11-24T09:33:17.139Z">
+<meta property="og:image" content="http://example.com/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5--%E5%B9%B3%E8%A1%A1%E8%BD%A6/image-20231217154208876.png">
+<meta property="og:image" content="http://example.com/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5--%E5%B9%B3%E8%A1%A1%E8%BD%A6/image-20231217165019714.png">
+<meta property="article:published_time" content="2023-11-23T15:32:52.000Z">
+<meta property="article:modified_time" content="2023-12-17T09:16:18.546Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="MCU">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5--%E5%B9%B3%E8%A1%A1%E8%BD%A6/image-20231217154208876.png">
     
     
     <!--- Icon Part-->
@@ -39,6 +43,8 @@
     <!--- Page Info-->
     
     <title>
+        
+            MCU-Vehicle-Project -
         
         H&#39;s Blog
     </title>
@@ -411,7 +417,11 @@ mjx-container[display="true"] + br {
 
             <div class="article-title">
                 
-                  <h1 class="article-title-regular"></h1>
+                  
+                  
+                    <img src="/images/wallhaven-0wxgp4.jpg" alt="MCU-Vehicle-Project" />
+                  
+                  <h1 class="article-title-cover">MCU-Vehicle-Project</h1>
                 
               </div>
               
@@ -433,26 +443,53 @@ mjx-container[display="true"] + br {
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-11-24 17:27:29</span>
-        <span class="mobile">2023-11-24 17:27:29</span>
+        <span class="desktop">2023-11-23 23:32:52</span>
+        <span class="mobile">2023-11-23 23:32:52</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-11-24 17:33:17</span>
-            <span class="mobile">2023-11-24 17:33:17</span>
+            <span class="desktop">2023-12-17 17:16:18</span>
+            <span class="mobile">2023-12-17 17:16:18</span>
             <span class="hover-info">Updated</span>
         </span>
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/MCU/">MCU</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/MCU/">MCU</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>255 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>492 Words</span>
         </span>
     
     
@@ -473,10 +510,20 @@ mjx-container[display="true"] + br {
             
 
             <div class="article-content markdown-body">
-                <h1 id="Fi1nd-th3-x—WP："><a href="#Fi1nd-th3-x—WP：" class="headerlink" title="Fi1nd_th3_x—WP："></a>Fi1nd_th3_x—WP：</h1><p>  不难发现，dP、dQ、dR这三个模数两两之间并不互素。</p>
-<p>  而中国剩余定理(CRT)不能解决模数不互质情况的模线性同余方程组。很明显，这是一道exCRT的题目。关键在于求出满足条件的解系，即x’。</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Task-exp</span></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">p= <span class="number">13014610351521460822156239705430709078128228907778181478242620569429327799535062679140131416771915929573454741755415612880788196172134695027201422226050343</span></span><br><span class="line">q= <span class="number">12772373441651008681294250861077909144300908972709561019514945881228862913558543752401850710742410181542277593157992764354184262443612041344749961361188667</span></span><br><span class="line">r= <span class="number">12128188838358065666687296689425460086282352520167544115899775800918383085863282204525519245937988837403739683061218279585168168892037039644924073220678419</span></span><br><span class="line">dP= <span class="number">116715737414908163105708802733763596338775040866822719131764691930369001776551671725363881836568414327815420649861207859100479999650414099346914809923964116101517432576562641857767638396325944526867458624878906968552835814078216316470330511385701105459053294771612727181278955929391807414985165924450505855941</span></span><br><span class="line">dQ= <span class="number">44209639124029393930247375993629669338749966042856653556428540234515804939791650065905841618344611216577807325504984178760405516121845853248373571704473449826683120387747977520655432396578361308033763778324817416507993263234206797363191089863381905902638111246229641698709383653501799974217118168526572365797</span></span><br><span class="line">dR= <span class="number">60735172709413093730902464873458655487237612458970735840670987186877666190533417038325630420791294593669609785154204677845781980482700493870590706892523016041087206844082222225206703139282240453277802870868459288354322845410191061009582969848870045522383447751431300627611762289800656277924903605593069856921</span></span><br><span class="line">c= <span class="number">93063188325241977486352111369210103514669725591157371105152980481620575818945846725056329712195176948376321676112726029400835578531311113991944495646259750817465291340479809938094295621728828133981781064352306623727112813796314947081857025012662546178066873083689559924412320123824601550896063037191589471066773464829226873338699012924080583389032903142107586722373131642720522453842444615499672193051587154108368643495983197891525747653618742702589711752256009</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#合并两个模不互素的同余方程</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge</span>(<span class="params">x1, x2</span>):</span><br><span class="line">    a1, m1 = x1</span><br><span class="line">    a2, m2 = x2</span><br><span class="line">    d = gmpy2.gcd(m1, m2) <span class="comment">#寻找最大公约数d</span></span><br><span class="line">    <span class="keyword">assert</span> (a2 - a1) % d == <span class="number">0</span> <span class="comment">#确保是有解的情况，即d|(a2-a1),即能够合并两方程</span></span><br><span class="line"></span><br><span class="line">    p1= m1 // d</span><br><span class="line">    p2= m2 // d</span><br><span class="line">    _,l1,l2 = gmpy2.gcdext(p1,p2)</span><br><span class="line">    k1 = -l1*((a1 - a2) // d) </span><br><span class="line">    lcm = gmpy2.lcm(m1,m2) <span class="comment">#寻找最小公倍数lcm</span></span><br><span class="line">    x0 = <span class="built_in">pow</span>(a1 + k1 * m1,<span class="number">1</span>,lcm ) <span class="comment">#满足情况的特解</span></span><br><span class="line">    <span class="keyword">return</span> x0,lcm</span><br><span class="line"></span><br><span class="line"><span class="comment">#构建同余方程</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">excrt</span>(<span class="params">ai,mi</span>):</span><br><span class="line">    tmp = <span class="built_in">zip</span>(ai,mi)</span><br><span class="line">    <span class="keyword">return</span> reduce(merge, tmp)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mi = [(q - <span class="number">1</span>) * (r - <span class="number">1</span>),(p - <span class="number">1</span>) * (r - <span class="number">1</span>),(p - <span class="number">1</span>) * (q - <span class="number">1</span>)]</span><br><span class="line">ai = [dP,dQ,dR]</span><br><span class="line">d,lcm = excrt(ai,mi)</span><br><span class="line">n = p * q * r</span><br><span class="line">m = <span class="built_in">pow</span>(c,d,n)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
+                <h1 id="工程实践–平衡车"><a href="#工程实践–平衡车" class="headerlink" title="工程实践–平衡车"></a>工程实践–平衡车</h1><p>Author: jrl777</p>
+<p>  基于STM32F103C8T6的两轮自平衡小车的学习过程记录，与诸君分享。内容参考平衡车开发指南。</p>
+<h1 id="1-原理分析"><a href="#1-原理分析" class="headerlink" title="1.原理分析"></a>1.原理分析</h1><h2 id="1-1平衡原理"><a href="#1-1平衡原理" class="headerlink" title="1.1平衡原理"></a>1.1平衡原理</h2><p>  控制平衡小车的基本原理是控制中的<strong>负反馈机制</strong>。</p>
+<p>  由于小车只有两个轮子着地，车体只会在轮子滚动的方向上发生倾斜。控制轮子转动，抵消在一个维度上倾斜的趋势便可以保持车体平衡了。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5--%E5%B9%B3%E8%A1%A1%E8%BD%A6/image-20231217154208876.png" alt="image-20231217154208876"></p>
+<p>接下来需要解决的问题就转化成如何控制小车车轮的运动，以此控制小车的平衡了。需要建立两轮自平衡小车的<strong>运动学</strong>和<strong>动力学</strong>数学模型，设计反馈控制来保证车体的平衡。</p>
+<h2 id="1-2动力学分析"><a href="#1-2动力学分析" class="headerlink" title="1.2动力学分析"></a>1.2动力学分析</h2><p>  保持车体平衡的控制规律可以简化为理想化的<strong>单摆</strong>物理模型。</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5--%E5%B9%B3%E8%A1%A1%E8%BD%A6/image-20231217165019714.png" alt="image-20231217165019714"></p>
+<p>  对单摆模型进行受力分析。</p>
+<p>  我们都知道，在单摆偏离平衡位置时会受到<strong>重力</strong>、和<strong>阻尼力</strong>的作用。而<strong>回复力</strong>是重力在切向上的分力（单摆在切向上作间简谐运动），属于作用力。</p>
+<p>  当物体离开平衡位置后，会受到重力和绳子的合力的作用，使物体回到平衡位置。这个合力就称为：<strong>回复力</strong>。其大小为</p>
+<p>​                                                                                <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="22.702ex" height="2.059ex" role="img" focusable="false" viewBox="0 -705 10034.1 910"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D439" d="M48 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H742Q749 676 749 669Q749 664 736 557T722 447Q720 440 702 440H690Q683 445 683 453Q683 454 686 477T689 530Q689 560 682 579T663 610T626 626T575 633T503 634H480Q398 633 393 631Q388 629 386 623Q385 622 352 492L320 363H375Q378 363 398 363T426 364T448 367T472 374T489 386Q502 398 511 419T524 457T529 475Q532 480 548 480H560Q567 475 567 470Q567 467 536 339T502 207Q500 200 482 200H470Q463 206 463 212Q463 215 468 234T473 274Q473 303 453 310T364 317H309L277 190Q245 66 245 60Q245 46 334 46H359Q365 40 365 39T363 19Q359 6 353 0H336Q295 2 185 2Q120 2 86 2T48 1Z"></path></g><g data-mml-node="mo" transform="translate(1026.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mo" transform="translate(2082.6,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(2860.6,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(3738.6,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"></path></g><g data-mml-node="mi" transform="translate(4215.6,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mi" transform="translate(4684.6,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(5029.6,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(5629.6,0)"><path data-c="1D703" d="M35 200Q35 302 74 415T180 610T319 704Q320 704 327 704T339 705Q393 701 423 656Q462 596 462 495Q462 380 417 261T302 66T168 -10H161Q125 -10 99 10T60 63T41 130T35 200ZM383 566Q383 668 330 668Q294 668 260 623T204 521T170 421T157 371Q206 370 254 370L351 371Q352 372 359 404T375 484T383 566ZM113 132Q113 26 166 26Q181 26 198 36T239 74T287 161T335 307L340 324H145Q145 321 136 286T120 208T113 132Z"></path></g><g data-mml-node="mo" transform="translate(6376.3,0)"><path data-c="2248" d="M55 319Q55 360 72 393T114 444T163 472T205 482Q207 482 213 482T223 483Q262 483 296 468T393 413L443 381Q502 346 553 346Q609 346 649 375T694 454Q694 465 698 474T708 483Q722 483 722 452Q722 386 675 338T555 289Q514 289 468 310T388 357T308 404T224 426Q164 426 125 393T83 318Q81 289 69 289Q55 289 55 319ZM55 85Q55 126 72 159T114 210T163 238T205 248Q207 248 213 248T223 249Q262 249 296 234T393 179L443 147Q502 112 553 112Q609 112 649 141T694 220Q694 249 708 249T722 217Q722 153 675 104T555 55Q514 55 468 76T388 123T308 170T224 192Q164 192 125 159T83 84Q80 55 69 55Q55 55 55 85Z"></path></g><g data-mml-node="mo" transform="translate(7432.1,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mi" transform="translate(8210.1,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(9088.1,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"></path></g><g data-mml-node="mi" transform="translate(9565.1,0)"><path data-c="1D703" d="M35 200Q35 302 74 415T180 610T319 704Q320 704 327 704T339 705Q393 701 423 656Q462 596 462 495Q462 380 417 261T302 66T168 -10H161Q125 -10 99 10T60 63T41 130T35 200ZM383 566Q383 668 330 668Q294 668 260 623T204 521T170 421T157 371Q206 370 254 370L351 371Q352 372 359 404T375 484T383 566ZM113 132Q113 26 166 26Q181 26 198 36T239 74T287 161T335 307L340 324H145Q145 321 136 286T120 208T113 132Z"></path></g></g></g></svg></mjx-container></p>
+<p>  在偏移角度很小的情况下，回复力与偏移的角度之间大小成正比，方向相反。 在此回复力作用下，单摆便进行周期运动。在空气中运动的单摆，由于受到空气的阻尼力， 单摆最终会停止在垂直平衡位置。空气的阻尼力与单摆运动速度成正比，方向相反。阻尼力越大，单摆越会尽快在垂直位置稳定下来。</p>
+<p>不同阻尼系数下，单摆的运动曲线也不同。</p>
 
             </div>
 
@@ -484,16 +531,16 @@ mjx-container[display="true"] + br {
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> </li>
+        <li><strong>Title:</strong> MCU-Vehicle-Project</li>
         <li><strong>Author:</strong> jrl</li>
-        <li><strong>Created at:</strong> 2023-11-24 17:27:29</li>
+        <li><strong>Created at:</strong> 2023-11-23 23:32:52</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-11-24 17:33:17
+                <strong>Updated at:</strong> 2023-12-17 17:16:18
             </li>
         
         <li>
-            <strong>Link:</strong> https://jrl777.github.io/2023/11/24/Fi1nd_th3_x---WP：/
+            <strong>Link:</strong> https://jrl777.github.io/2023/11/23/工程实践--平衡车/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -505,11 +552,34 @@ mjx-container[display="true"] + br {
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/MCU/">#MCU</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
 
             
                 <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/11/23/Fi1nd_th3_x---WP%EF%BC%9A/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Geek2023</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
                     
                     
                         <div class="article-next">
@@ -583,8 +653,8 @@ mjx-container[display="true"] + br {
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title"></div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Fi1nd-th3-x%E2%80%94WP%EF%BC%9A"><span class="nav-text">Fi1nd_th3_x—WP：</span></a></li></ol>
+        <div class="page-title">MCU-Vehicle-Project</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%E2%80%93%E5%B9%B3%E8%A1%A1%E8%BD%A6"><span class="nav-text">工程实践–平衡车</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90"><span class="nav-text">1.原理分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1%E5%B9%B3%E8%A1%A1%E5%8E%9F%E7%90%86"><span class="nav-text">1.1平衡原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%88%86%E6%9E%90"><span class="nav-text">1.2动力学分析</span></a></li></ol></li></ol>
 
     </div>
 </div>
