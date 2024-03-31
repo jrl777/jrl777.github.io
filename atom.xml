@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-03-16T10:36:35.158Z</updated>
+  <updated>2024-03-31T07:15:57.680Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MEMS-Study</title>
+    <link href="http://example.com/2024/03/31/MEMS-Study/"/>
+    <id>http://example.com/2024/03/31/MEMS-Study/</id>
+    <published>2024-03-31T05:39:52.000Z</published>
+    <updated>2024-03-31T07:15:57.680Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="MEMS振荡器的结构优化和电路设计"><a href="#MEMS振荡器的结构优化和电路设计" class="headerlink" title="MEMS振荡器的结构优化和电路设计"></a>MEMS振荡器的结构优化和电路设计</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>  基于微机电系统(MEMS)技术的振荡器凭借着易集成、低成本和频率可调等诸多优秀特性正在逐步抢占时钟市场份额。本文在对硅 MEMS 振荡器的工作原理，国内外发展现状进行充分调研的基础上，主要从 MEMS 谐振器的结构设计优化，温度补偿电路设计经行研究。</p><p>  硅 MEMS 振荡器的输出频率随温度变化偏移较大，较差的频率温度稳定性限制了其在无线通信和导航等高精度场合中的应用。本文设计了基于锁相环的有源开环补偿电路，电路包括锁相环，温度传感器和微处理单元。分析了各模块的设计和构建方案，并对电路进行焊接制作构成了具有温度补偿功能的 MEMS振荡器。</p><p><strong>关键词：</strong> MEMS 振荡器，MEMS 谐振器，接口电路，温度补偿电路</p><h2 id="1-绪论"><a href="#1-绪论" class="headerlink" title="1 绪论"></a>1 绪论</h2><h3 id="1-1-研究背景"><a href="#1-1-研究背景" class="headerlink" title="1.1 研究背景"></a>1.1 研究背景</h3><p>  几乎在所有的电子设备中，都存在着一个时钟(clock)，时钟是用来测量时间或同步事件的准确参考源，是系统运行的时间参考，时钟的性能直接影响了系统性能的上限。</p><img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240331135725038.png" class="" title="image-20240331135725038"><p>  如今的时钟大多基于谐振器技术，谐振器往往有着固定的谐振频率，配合上一定的维持机制可构成振荡器输出稳定信号，  主要代表便是石英晶体振荡器。石英是一种压电材料，通过简单的外接电路便可发生振荡，不同的几何形状可以被用来实现不同的谐振频率。</p><img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240331135713044.png" class="" title="image-20240331135713044"><p>  石英还具有与其晶体结构有关的额外优点，当在一定角度切割时，石英晶体对温度的依赖性很小，温度稳定性是时钟的一个非常重要的特性，温度变化是大多数参考频率漂移的主要原因。</p><img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240331135654574.png" class="" title="image-20240331135654574"><p>  由于石英晶体振荡器构建简单并有着很高的频率稳定性，很快绝大部分的时钟市场,从用于无线电和手表的低稳定性振荡器到用于军用雷达和导航的高稳定性设备，都被石英所占据。但与此同时，一种以微机电系统(Micro-ElectroMechanical Systems, MEMS)为核心技术的微机械谐振器正蓬勃发展，微机械谐振器可以通过外部驱动将微机械结构激励在固定频率上。</p><h3 id="1-2-MEMS谐振器"><a href="#1-2-MEMS谐振器" class="headerlink" title="1.2 MEMS谐振器"></a>1.2 MEMS谐振器</h3><h4 id="1-2-1-MEMS谐振器概述"><a href="#1-2-1-MEMS谐振器概述" class="headerlink" title="1.2.1 MEMS谐振器概述"></a>1.2.1 MEMS谐振器概述</h4><p>  MEMS 谐振器是一种基于微机电系统的机械结构，不同的材料和结构具有不同的谐振频率，当外界电信号与 MEMS 谐振器的谐振频率一致时，谐振器便会发生共振输出电信号。其本质是一个换能器，通过振动将机械能和电能相互转化，在谐振频率处转化效率最高。历史上第一个 MEMS 谐振器是由 Nathanson 等人在 1967 年提出的，它由一个场效应晶体管构成，晶体管的金属栅极电极作为一个柔性悬臂梁悬浮在通道上，当栅极有一个工作在机械谐振频率上的电压驱动时，静电力使栅极上下振动，通过晶体管的沟道实现调制传导，从而在传统集成电路技术中实现了高 Q(品质因数)值的滤波(约 500)，这个演示标志着 MEMS 谐振器的诞生，但是直到 20 世纪 80 年代中后期梳状叉指电容换能器的出现，MEMS 谐振器才开始快速发展。</p><img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240331141823112.png" class="" title="image-20240331141823112"><h4 id="1-2-2-MEMS谐振器的震动模态"><a href="#1-2-2-MEMS谐振器的震动模态" class="headerlink" title="1.2.2 MEMS谐振器的震动模态"></a>1.2.2 MEMS谐振器的震动模态</h4><p>  由于制造的限制，MEMS 谐振器的主要结构包括梁、圆盘、圆环和平板等，这些结构在不同的谐振模态下工作，这些模态主要分为弯曲模态、体振动模态、剪切模态和扭转模态。其中体振动模态又可细分为纵向伸展模态，横向伸展模态，平方伸展模态和呼吸模态，剪切模态也可细分为 Lame 模态,面剪切模态和酒杯模态[7]。每个微机械谐振器都可以有多个不同振动模态，例如一个简单的梁可以在不同的弯曲模态和伸展模态下振动，如图 1.5(a)。 某些振动模式容易激励并振动稳定，而这些模态往往被设计成主导模态，通过设计相应得谐振器接口电路可以使谐振器工作在主导模态之中。</p><p>  虽然同一个结构有多种振动模式，但是振动模式与激励方式直接相关。例如，对于圆盘谐振器，如果采用周围布置的电容驱动，会以伸展模态或者酒杯模态振动；而如果在圆盘上方布置驱动电极，则可以获得的 Lame 振动模态。由于驱动电容可选位置的限制，MEMS 谐振器的驱动电极往往位于振动结构的周围。因此，对于圆盘、圆环和平板等结构，多以面内伸展模态和酒杯模态为主，如图 1.5(b)。</p><img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240331142624805.png" class="" title="image-20240331142624805"><h4 id="1-2-3-MEMS谐振器的驱动和检测"><a href="#1-2-3-MEMS谐振器的驱动和检测" class="headerlink" title="1.2.3 MEMS谐振器的驱动和检测"></a>1.2.3 MEMS谐振器的驱动和检测</h4><p>  MEMS 谐振器旨在利用机械领域的优良特性来解决电学系统的局限性，例如，在很多通信系统之中，需要高 Q 值的谐振器，但是依赖电学器件 RLC 实现的谐振器 Q 值很难超过 10，而由微机械构成的谐振器的 Q 值可以超过 106 [10]。因此，为了使机械元件在电学系统中充分发挥其优势，需要找到方法实现电信号和机械信号的转化，也就是对 MEMS 谐振器的驱动和检测。</p><p>  MEMS 谐振器的驱动和检测方法很丰富，在驱动方面，除了前文提到的电容式的静电驱动，还有压电驱动、电热驱动和磁驱动。</p><h2 id="2-MEMS谐振器的设计优化及电学模型"><a href="#2-MEMS谐振器的设计优化及电学模型" class="headerlink" title="2 MEMS谐振器的设计优化及电学模型"></a>2 MEMS谐振器的设计优化及电学模型</h2><p>  MEMS 领域内已经产生了大量的谐振器，这些谐振器有着不同的振动模态和不同的驱动方式。其中工作在体振动模态下的器件往往具有更高的谐振频率和 Q值，而电容式静电驱动的谐振器由于采用硅作为构建材料更符合 IC 工艺的发展，两者兼具的谐振器则无疑更受青睐。因此本章将以工作在体振动模态的电容式环形谐振器为基础展开研究，提出并设计了一款具有高 Q 值，低动态阻抗的六环MEMS 谐振器，对其设计过程进行了详细分析。最后为谐振器构建等效电学模型。</p><h3 id="2-1-六环MEMS谐振器设计"><a href="#2-1-六环MEMS谐振器设计" class="headerlink" title="2.1 六环MEMS谐振器设计"></a>2.1 六环MEMS谐振器设计</h3><h4 id="2-1-1-环形谐振器"><a href="#2-1-1-环形谐振器" class="headerlink" title="2.1.1  环形谐振器"></a>2.1.1  环形谐振器</h4>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;MEMS振荡器的结构优化和电路设计&quot;&gt;&lt;a href=&quot;#MEMS振荡器的结构优化和电路设计&quot; class=&quot;headerlink&quot; title=&quot;MEMS振荡器的结构优化和电路设计&quot;&gt;&lt;/a&gt;MEMS振荡器的结构优化和电路设计&lt;/h1&gt;&lt;h2 id=&quot;摘要&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="MCU" scheme="http://example.com/categories/MCU/"/>
+    
+    
+    <category term="true" scheme="http://example.com/tags/true/"/>
+    
+  </entry>
   
   <entry>
     <title>CVP_to_SVP</title>
