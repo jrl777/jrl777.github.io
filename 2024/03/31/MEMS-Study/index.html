@@ -30,8 +30,12 @@
 <meta property="og:image" content="http://example.com/2024/03/31/MEMS-Study/image-20240331135654574.png">
 <meta property="og:image" content="http://example.com/2024/03/31/MEMS-Study/image-20240331141823112.png">
 <meta property="og:image" content="http://example.com/2024/03/31/MEMS-Study/image-20240331142624805.png">
+<meta property="og:image" content="http://example.com/2024/03/31/MEMS-Study/image-20240331152828103.png">
+<meta property="og:image" content="http://example.com/2024/03/31/MEMS-Study/image-20240405202627230.png">
+<meta property="og:image" content="http://example.com/2024/03/31/MEMS-Study/image-20240405202938893.png">
+<meta property="og:image" content="http://example.com/2024/03/31/MEMS-Study/image-20240405203241583.png">
 <meta property="article:published_time" content="2024-03-31T05:39:52.000Z">
-<meta property="article:modified_time" content="2024-03-31T07:15:57.680Z">
+<meta property="article:modified_time" content="2024-04-05T12:32:56.702Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="true">
 <meta name="twitter:card" content="summary">
@@ -453,8 +457,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-03-31 15:15:57</span>
-            <span class="mobile">2024-03-31 15:15:57</span>
+            <span class="desktop">2024-04-05 20:32:56</span>
+            <span class="mobile">2024-04-05 20:32:56</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -492,12 +496,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.8k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>2.1k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>7 Mins</span>
         </span>
     
     
@@ -538,7 +542,26 @@ mjx-container[display="true"] + br {
 <h4 id="1-2-3-MEMS谐振器的驱动和检测"><a href="#1-2-3-MEMS谐振器的驱动和检测" class="headerlink" title="1.2.3 MEMS谐振器的驱动和检测"></a>1.2.3 MEMS谐振器的驱动和检测</h4><p>  MEMS 谐振器旨在利用机械领域的优良特性来解决电学系统的局限性，例如，在很多通信系统之中，需要高 Q 值的谐振器，但是依赖电学器件 RLC 实现的谐振器 Q 值很难超过 10，而由微机械构成的谐振器的 Q 值可以超过 106 [10]。因此，为了使机械元件在电学系统中充分发挥其优势，需要找到方法实现电信号和机械信号的转化，也就是对 MEMS 谐振器的驱动和检测。</p>
 <p>  MEMS 谐振器的驱动和检测方法很丰富，在驱动方面，除了前文提到的电容式的静电驱动，还有压电驱动、电热驱动和磁驱动。</p>
 <h2 id="2-MEMS谐振器的设计优化及电学模型"><a href="#2-MEMS谐振器的设计优化及电学模型" class="headerlink" title="2 MEMS谐振器的设计优化及电学模型"></a>2 MEMS谐振器的设计优化及电学模型</h2><p>  MEMS 领域内已经产生了大量的谐振器，这些谐振器有着不同的振动模态和不同的驱动方式。其中工作在体振动模态下的器件往往具有更高的谐振频率和 Q值，而电容式静电驱动的谐振器由于采用硅作为构建材料更符合 IC 工艺的发展，两者兼具的谐振器则无疑更受青睐。因此本章将以工作在体振动模态的电容式环形谐振器为基础展开研究，提出并设计了一款具有高 Q 值，低动态阻抗的六环MEMS 谐振器，对其设计过程进行了详细分析。最后为谐振器构建等效电学模型。</p>
-<h3 id="2-1-六环MEMS谐振器设计"><a href="#2-1-六环MEMS谐振器设计" class="headerlink" title="2.1 六环MEMS谐振器设计"></a>2.1 六环MEMS谐振器设计</h3><h4 id="2-1-1-环形谐振器"><a href="#2-1-1-环形谐振器" class="headerlink" title="2.1.1  环形谐振器"></a>2.1.1  环形谐振器</h4>
+<h3 id="2-1-六环MEMS谐振器设计"><a href="#2-1-六环MEMS谐振器设计" class="headerlink" title="2.1 六环MEMS谐振器设计"></a>2.1 六环MEMS谐振器设计</h3><h4 id="2-1-1-环形谐振器"><a href="#2-1-1-环形谐振器" class="headerlink" title="2.1.1  环形谐振器"></a>2.1.1  环形谐振器</h4><p>  环形谐振器是微机电系统中一种常见的电容式谐振器，其基本结构如图 2.1。在圆环的内外侧都布置了电极，当外电极作为驱动电极被施加了交流电压，外电极与圆环之间会产生静电力，当交流电压频率与圆环本身的谐振频率一致时，圆环便会发生共振，由此改变了内电极与圆环之间的电容大小，在输出端便会输出电流信号。</p>
+<img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240331152828103.png" class="" title="image-20240331152828103">
+
+
+
+
+
+
+
+<h3 id="2-2-谐振器的等效电学模型"><a href="#2-2-谐振器的等效电学模型" class="headerlink" title="2.2 谐振器的等效电学模型"></a>2.2 谐振器的等效电学模型</h3><p>  为了更好的设计接口电路，需要将微机械结构转化成等效电路模型，以便于对其电气性能进行更好的分析。对于简单的单个电容式谐振器而言，整个系统包括输入输出端的机电换能器和机械谐振结构，如图 2.13。</p>
+<img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240405202627230.png" class="" title="image-20240405202627230">
+
+<p>​    串联RLC等效电学模型如图2.14</p>
+<img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240405202938893.png" class="" title="image-20240405202938893">
+
+
+
+<p>  本文所研究的六环 MEMS 谐振器可以看成三个图 2.15 所示的双环级联结构，图 2.15 描述了双环谐振器的工作示意图，以及质量刚度阻尼模型和等效电学模型。其中耦合梁用 T 型电容器结构进行了等效。</p>
+<img lazyload="" src="/images/loading.svg" data-src="/2024/03/31/MEMS-Study/image-20240405203241583.png" class="" title="image-20240405203241583">
+
             </div>
 
             
@@ -550,7 +573,7 @@ mjx-container[display="true"] + br {
         <li><strong>Created at:</strong> 2024-03-31 13:39:52</li>
         
             <li>
-                <strong>Updated at:</strong> 2024-03-31 15:15:57
+                <strong>Updated at:</strong> 2024-04-05 20:32:56
             </li>
         
         <li>
@@ -579,6 +602,21 @@ mjx-container[display="true"] + br {
 
             
                 <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2024/06/22/EDA-Study/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">EDA-Study</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
                     
                     
                         <div class="article-next">
@@ -653,7 +691,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">MEMS-Study</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MEMS%E6%8C%AF%E8%8D%A1%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E4%BC%98%E5%8C%96%E5%92%8C%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1"><span class="nav-text">MEMS振荡器的结构优化和电路设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BB%AA%E8%AE%BA"><span class="nav-text">1 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">1.1 研究背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-MEMS%E8%B0%90%E6%8C%AF%E5%99%A8"><span class="nav-text">1.2 MEMS谐振器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-MEMS%E8%B0%90%E6%8C%AF%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%8C%96%E5%8F%8A%E7%94%B5%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-text">2 MEMS谐振器的设计优化及电学模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%85%AD%E7%8E%AFMEMS%E8%B0%90%E6%8C%AF%E5%99%A8%E8%AE%BE%E8%AE%A1"><span class="nav-text">2.1 六环MEMS谐振器设计</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MEMS%E6%8C%AF%E8%8D%A1%E5%99%A8%E7%9A%84%E7%BB%93%E6%9E%84%E4%BC%98%E5%8C%96%E5%92%8C%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1"><span class="nav-text">MEMS振荡器的结构优化和电路设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BB%AA%E8%AE%BA"><span class="nav-text">1 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="nav-text">1.1 研究背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-MEMS%E8%B0%90%E6%8C%AF%E5%99%A8"><span class="nav-text">1.2 MEMS谐振器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-MEMS%E8%B0%90%E6%8C%AF%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%BC%98%E5%8C%96%E5%8F%8A%E7%94%B5%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-text">2 MEMS谐振器的设计优化及电学模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%85%AD%E7%8E%AFMEMS%E8%B0%90%E6%8C%AF%E5%99%A8%E8%AE%BE%E8%AE%A1"><span class="nav-text">2.1 六环MEMS谐振器设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E8%B0%90%E6%8C%AF%E5%99%A8%E7%9A%84%E7%AD%89%E6%95%88%E7%94%B5%E5%AD%A6%E6%A8%A1%E5%9E%8B"><span class="nav-text">2.2 谐振器的等效电学模型</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
