@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-22T10:33:01.488Z</updated>
+  <updated>2024-06-22T10:39:36.158Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2024/06/22/EDA-Study/"/>
     <id>http://example.com/2024/06/22/EDA-Study/</id>
     <published>2024-06-22T07:51:26.000Z</published>
-    <updated>2024-06-22T10:33:01.488Z</updated>
+    <updated>2024-06-22T10:39:36.158Z</updated>
     
     <content type="html"><![CDATA[<h1 id="EDA-Study-Diary"><a href="#EDA-Study-Diary" class="headerlink" title="EDA Study Diary"></a>EDA Study Diary</h1><h2 id="一、EDA-Knowledge"><a href="#一、EDA-Knowledge" class="headerlink" title="一、EDA Knowledge"></a>一、EDA Knowledge</h2><h3 id="1-PCB相关基础知识"><a href="#1-PCB相关基础知识" class="headerlink" title="1.PCB相关基础知识"></a>1.PCB相关基础知识</h3><p>  PCB(Printed Circuit Board),即印刷电路板，或印刷线路板。</p><p>  功能上类似导线，是连接电子元器件的载体，支撑并连接电子元器件。</p><img lazyload="" src="/images/loading.svg" data-src="/2024/06/22/EDA-Study/image-20240622161038687.png" class="" title="image-20240622161038687"><h4 id="1-通孔、盲孔、埋孔"><a href="#1-通孔、盲孔、埋孔" class="headerlink" title="(1)通孔、盲孔、埋孔"></a>(1)通孔、盲孔、埋孔</h4><img lazyload="" src="/images/loading.svg" data-src="/2024/06/22/EDA-Study/image-20240622171155099.png" class="" title="image-20240622171155099"><ul><li>通孔：从顶层开孔到底层打通PCB，在内壁灌注铜皮。</li><li>埋孔：埋在内层中，内层间切换，于外部来说不可见 。</li><li>盲孔：始于第一层，顶层和除底层之间的中间层切换。</li></ul><h4 id="（2）元素总结"><a href="#（2）元素总结" class="headerlink" title="（2）元素总结"></a>（2）元素总结</h4><img lazyload="" src="/images/loading.svg" data-src="/2024/06/22/EDA-Study/image-20240622183259096.png" class="" title="image-20240622183259096"><ul><li>导线（连接）</li><li>过孔</li><li>丝印（用白油墨标记封装的元器件）</li><li>焊盘（焊接元器件如电阻等等 ）</li><li>定位孔（机械结构，安装PCB）</li></ul>]]></content>
     
